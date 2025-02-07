@@ -15,11 +15,11 @@ main(int argc, char *argv[])
 
     if ((argc > 3) && (strcmp(argv[3], "x") == 0))
         {
-            fd = open(argv[1], O_WRONLY|O_CREAT); 
+            fd = open(argv[1], O_WRONLY|O_CREAT, S_IWUSR|S_IRUSR); 
             printf("No append\n");
             append = false; 
         } else {
-            fd = open(argv[1], O_WRONLY|O_APPEND|O_CREAT);
+            fd = open(argv[1], O_WRONLY|O_APPEND|O_CREAT, S_IWUSR|S_IRUSR);
         }
 
     errno = 0;

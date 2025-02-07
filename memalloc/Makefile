@@ -1,17 +1,14 @@
 include ../Makefile.inc
 
-GEN_EXE = atomic_append bad_exclusive_open copy \
-	multi_descriptors seek_io t_readv t_truncate \
-	append_prepend dup verif_dup readv_writev
+GEN_EXE = free_and_sbrk my_malloc malloc_experiments prbrk_experiment
 
-LINUX_EXE = large_file
+LINUX_EXE =
 
 EXE = ${GEN_EXE} ${LINUX_EXE}
 
 all : ${EXE}
 
 allgen : ${GEN_EXE}
-
 
 clean : 
 	${RM} ${EXE} *.o

@@ -19,7 +19,7 @@ main(int argc, char *argv[])
 		printf("Error opening file.");
 		close(fd);
 	}else{
-		ret_offset = lseek(fd, 0, SEEK_SET);
+		ret_offset = lseek(fd, -10, SEEK_CUR);
 		printf("the offset after lseek is: %ld", (long) ret_offset);
 		write(fd, "123", 3);
 		close(fd);
