@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 #define ALLOC_CNT   4096
-#define ALLOC_SIZE  1024
+#define ALLOC_SIZE  1012
 
 // This program allocates buffers of 1024 bytes using malloc and print the times at which the program break variable changes
 int main()
